@@ -30,7 +30,7 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed w-full z-50 transition-all duration-300 bg-[#181B29] shadow-lg border-b border-[#23263a]`}
+      className={`fixed w-full z-50 transition-all duration-300 bg-[#181B29] shadow-md`}
       style={{ minHeight: 64 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
