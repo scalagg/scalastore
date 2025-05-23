@@ -64,19 +64,104 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="max-w-3xl mx-auto py-12 px-4">
-        <div className="mb-8">
-          <h3 className="text-2xl font-bold mb-2">About {settings.server_name}</h3>
-          <p className="text-gray-300">{settings.server_name} is a Minecraft server dedicated to providing a fun and unique experience for all players. Our store helps keep the server running and allows us to add new features and content for the community. Thank you for your support!</p>
-        </div>
-        <div>
-          <h4 className="text-xl font-semibold mb-1">Need Help?</h4>
-          <p className="text-gray-400 mb-2">If you have any questions or issues related to payments, join our Discord or contact our support team. We're here to help!</p>
-          <p className="text-gray-400 mb-2">Email: <a href="mailto:support@scala.gg" className="text-[#5865F2] hover:text-[#4752C4]">support@scala.gg</a></p>
-          <Link href={settings.discord_url} target="_blank" rel="noopener noreferrer" className="inline-block px-6 py-2 bg-[#5865F2] hover:bg-[#4752C4] rounded-lg font-semibold transition-colors">Contact Support</Link>
+      {/* Server Mission Section */}
+      <section className="max-w-4xl mx-auto py-12 px-4">
+        <div className="bg-[#181B29] rounded-2xl p-8 border border-[#23263a] shadow-lg">
+          <h3 className="text-2xl font-bold mb-4 text-center">Supporting {settings.server_name}</h3>
+          <p className="text-gray-300 mb-4">
+            Here at {settings.server_name}, we aim to provide the best Minecraft experience for our players. Donations help us improve in many ways such as development, builds, graphics, and paying for hosting. All donations go towards improving and helping fund {settings.server_name} - we don't use any of it for personal use.
+          </p>
+          <p className="text-gray-300">
+            Your support allows us to continuously add new features, maintain high-quality server performance, and create amazing content for our community. Thank you for helping us grow!
+          </p>
         </div>
       </section>
+
+      {/* Important Information Section */}
+      <section className="max-w-4xl mx-auto py-8 px-4">
+        <div className="bg-yellow-900/20 border border-yellow-600/30 rounded-2xl p-8">
+          <h3 className="text-2xl font-bold mb-4 text-yellow-400">Important Information</h3>
+          <div className="space-y-3 text-gray-300">
+            <p>• <strong>Account Ownership:</strong> Make sure that you own the account you are donating for! We do not offer rank transfers.</p>
+            <p>• <strong>VPN/Proxy Warning:</strong> Do not attempt to check out while using a VPN or Proxy. You will be flagged by the fraud protection system.</p>
+            <p>• <strong>In-Game Purchases:</strong> If you are in-game while purchasing your rank, please remember to relog after your purchase.</p>
+            <p>• <strong>Delivery Time:</strong> Most purchases are delivered instantly. If you experience delays, please contact support.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Payment & Terms Section */}
+      <section className="max-w-4xl mx-auto py-8 px-4 mb-12">
+        <div className="bg-[#181B29] rounded-2xl p-8 border border-[#23263a] shadow-lg">
+          <h3 className="text-2xl font-bold mb-4">Payment Methods & Terms</h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold mb-3 text-blue-400">Accepted Payment Methods</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>• PayPal</p>
+                <p>• Credit/Debit Cards</p>
+                <p>• Apple Pay & Google Pay</p>
+                <p>• Cryptocurrency (via Tebex)</p>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-3 text-red-400">Terms & Conditions</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>• All donations are <strong>non-refundable</strong></p>
+                <p>• Purchases are <strong>non-transferable</strong></p>
+                <p>• You must own the Minecraft account</p>
+                <p>• Subject to server terms of service</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 pt-6 border-t border-[#23263a]">
+            <p className="text-sm text-gray-400 text-center">
+              By making a purchase, you agree to our terms of service and acknowledge that all sales are final.
+            </p>
+          </div>
+        </div>
+      </section>
+
+            {/* Contact Section */}
+            <section className="max-w-4xl mx-auto py-12 px-4">
+        <div className="bg-[#181B29] rounded-2xl p-8 border border-[#23263a] shadow-lg">
+          <h3 className="text-2xl font-bold mb-6 text-center">Contact & Support</h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Get Help</h4>
+              <div className="space-y-3 text-gray-300">
+                <p>Need assistance with your purchase or have questions about our server? We're here to help!</p>
+                <div className="space-y-2">
+                  <p><strong>Email:</strong> <a href="mailto:support@scala.gg" className="text-[#5865F2] hover:text-[#4752C4] transition-colors">support@scala.gg</a></p>
+                  <p><strong>Discord:</strong> Join our community server for instant support</p>
+                  <p><strong>Response Time:</strong> Usually within 24 hours</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-green-400">What We Can Help With</h4>
+              <div className="space-y-2 text-gray-300">
+                <p>• Purchase issues and delivery problems</p>
+                <p>• Account-related questions</p>
+                <p>• Technical support for server issues</p>
+                <p>• Billing inquiries</p>
+                <p>• Terms of service questions</p>
+                <p>• EULA compliance matters</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 pt-6 border-t border-[#23263a] text-center">
+            <Link href={settings.discord_url} target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 bg-[#5865F2] hover:bg-[#4752C4] rounded-lg font-semibold transition-colors mr-4">
+              Join Discord Support
+            </Link>
+            <a href="mailto:support@scala.gg" className="inline-block px-8 py-3 bg-gray-600 hover:bg-gray-700 rounded-lg font-semibold transition-colors">
+              Send Email
+            </a>
+          </div>
+        </div>
+      </section>
+
+
     </main>
   );
 }
