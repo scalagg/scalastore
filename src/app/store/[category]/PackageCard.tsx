@@ -3,6 +3,9 @@
 import { useState } from 'react';
 import { settings } from '@/config/settings';
 import { motion, AnimatePresence } from 'framer-motion';
+import AddToCartButton from '@/components/AddToCartButton';
+import LoginForm from '@/components/LoginForm';
+import { useUser } from '@/contexts/UserContext';
 
 interface PackageCardProps {
     rank: {
@@ -17,6 +20,12 @@ interface PackageCardProps {
 
 export default function PackageCard({ rank }: PackageCardProps) {
     const [open, setOpen] = useState(false);
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const { user } = useUser();
+
+    const handleLoginRequired = () => {
+        setShowLoginModal(true);
+    };
 
     return (
         <>
@@ -57,12 +66,14 @@ export default function PackageCard({ rank }: PackageCardProps) {
                                 </span>
                             )}
                         </div>
-                        <button
-                            onClick={e => { e.stopPropagation(); window.location.href = `https://checkout.tebex.io/basket/${rank.id}`; }}
-                            className="px-5 py-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg font-semibold shadow transition-all duration-200"
-                        >
-                            Add to Cart
-                        </button>
+                        <div onClick={e => e.stopPropagation()}>
+                            <AddToCartButton
+                                packageId={rank.id}
+                                packageName={rank.name}
+                                onLoginRequired={handleLoginRequired}
+                                className="px-5 py-2 text-sm"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -106,13 +117,36 @@ export default function PackageCard({ rank }: PackageCardProps) {
                                 </div>
                             </div>
                             <div className="prose prose-invert max-w-none mb-6" dangerouslySetInnerHTML={{ __html: rank.description }} />
-                            <button
-                                onClick={() => window.location.href = `https://checkout.tebex.io/basket/${rank.id}`}
-                                className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white rounded-lg font-semibold shadow transition-all duration-200 text-lg"
-                            >
-                                Add to Cart
-                            </button>
+                            <AddToCartButton
+                                packageId={rank.id}
+                                packageName={rank.name}
+                                onLoginRequired={handleLoginRequired}
+                                className="text-lg"
+                            />
                         </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Login Modal */}
+            <AnimatePresence>
+                {showLoginModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[100] flex items-center justify-center p-4"
+                        style={{ pointerEvents: 'auto' }}
+                    >
+                        <div
+                            className="absolute inset-0 bg-black/50"
+                            onClick={() => setShowLoginModal(false)}
+                            style={{ pointerEvents: 'auto' }}
+                        />
+                        <LoginForm
+                            onLogin={() => setShowLoginModal(false)}
+                            onClose={() => setShowLoginModal(false)}
+                        />
                     </motion.div>
                 )}
             </AnimatePresence>

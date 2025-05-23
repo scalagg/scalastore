@@ -69,7 +69,7 @@ export default function Home() {
         <div className="bg-[#181B29] rounded-2xl p-8 border border-[#23263a] shadow-lg">
           <h3 className="text-2xl font-bold mb-4 text-center">Supporting {settings.server_name}</h3>
           <p className="text-gray-300 mb-4">
-            Here at {settings.server_name}, we aim to provide the best Minecraft experience for our players. Donations help us improve in many ways such as development, builds, graphics, and paying for hosting. All donations go towards improving and helping fund {settings.server_name} - we don't use any of it for personal use.
+            Here at {settings.server_name}, we aim to provide the best Minecraft experience for our players. Purchases help us improve in many ways such as development, builds, graphics, and paying for hosting. All purchases go towards improving and helping fund {settings.server_name} - we don't use any of it for personal use.
           </p>
           <p className="text-gray-300">
             Your support allows us to continuously add new features, maintain high-quality server performance, and create amazing content for our community. Thank you for helping us grow!
@@ -107,7 +107,7 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-3 text-red-400">Terms & Conditions</h4>
               <div className="space-y-2 text-gray-300">
-                <p>• All donations are <strong>non-refundable</strong></p>
+                <p>• All purchases are <strong>non-refundable</strong></p>
                 <p>• Purchases are <strong>non-transferable</strong></p>
                 <p>• You must own the Minecraft account</p>
                 <p>• Subject to server terms of service</p>
