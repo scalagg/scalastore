@@ -7,7 +7,7 @@ export default function NotFound() {
             <p className="text-gray-400 mb-8">The category you're looking for doesn't exist.</p>
             <Link 
                 href="/store"
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                className="px-6 py-3 bg-yellow-600 hover:bg-yellow-700 rounded-lg transition-colors"
             >
                 Return to Store
             </Link>

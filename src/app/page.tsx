@@ -50,17 +50,17 @@ export default function Home() {
             className="w-full h-full object-cover object-center opacity-60"
           />
           <motion.div 
-            className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-purple-900/50 to-cyan-900/70"
+            className="absolute inset-0 bg-gradient-to-br from-yellow-900/70 via-amber-900/50 to-orange-900/70"
             animate={{
               background: [
-                'linear-gradient(45deg, rgba(30, 64, 175, 0.7), rgba(88, 28, 135, 0.5), rgba(21, 94, 117, 0.7))',
-                'linear-gradient(45deg, rgba(88, 28, 135, 0.7), rgba(21, 94, 117, 0.5), rgba(30, 64, 175, 0.7))',
-                'linear-gradient(45deg, rgba(21, 94, 117, 0.7), rgba(30, 64, 175, 0.5), rgba(88, 28, 135, 0.7))',
+                'linear-gradient(45deg, rgba(180, 83, 9, 0.7), rgba(146, 64, 14, 0.5), rgba(154, 52, 18, 0.7))',
+                'linear-gradient(45deg, rgba(146, 64, 14, 0.7), rgba(154, 52, 18, 0.5), rgba(180, 83, 9, 0.7))',
+                'linear-gradient(45deg, rgba(154, 52, 18, 0.7), rgba(180, 83, 9, 0.5), rgba(146, 64, 14, 0.7))',
               ]
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[#181B29]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-[#1A1810]/90" />
         </div>
 
         {/* Floating particles around logo */}
@@ -69,7 +69,7 @@ export default function Home() {
             {particles.map((particle) => (
               <motion.div
                 key={particle.id}
-                className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-30"
+                className="absolute w-2 h-2 bg-yellow-400 rounded-full opacity-30"
                 style={{
                   left: particle.left,
                   top: particle.top,
@@ -103,7 +103,7 @@ export default function Home() {
             className="relative inline-block mb-6"
           >
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-xl opacity-50"
+              className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl blur-xl opacity-50"
               animate={{ 
                 scale: [1, 1.2, 1],
                 opacity: [0.5, 0.8, 0.5]
@@ -121,7 +121,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-2xl"
+            className="text-4xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent drop-shadow-2xl"
           >
             Welcome to {settings.server_name} Store
           </motion.h1>
@@ -145,7 +145,7 @@ export default function Home() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link 
                 href="/store" 
-                className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/25 relative overflow-hidden"
+                className="group px-8 py-4 bg-gradient-to-r from-yellow-600 to-amber-700 hover:from-yellow-700 hover:to-amber-800 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-yellow-500/25 relative overflow-hidden"
               >
                 <span className="relative z-10">Visit Store</span>
                 <motion.div
@@ -196,7 +196,7 @@ export default function Home() {
                 ease: "easeInOut",
               }}
             >
-              <item.icon className="w-8 h-8 text-blue-400 opacity-40" />
+              <item.icon className="w-8 h-8 text-yellow-400 opacity-40" />
             </motion.div>
           ))}
         </div>
@@ -212,7 +212,7 @@ export default function Home() {
           className="text-center mb-12"
         >
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+            className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"
             animate={{
               backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
             }}
@@ -245,20 +245,20 @@ export default function Home() {
             >
               <Link href={category.url} className="block group">
                 <motion.div 
-                  className="relative bg-gradient-to-br from-[#181B29] to-[#0F1119] rounded-2xl shadow-2xl overflow-hidden border border-[#23263a] hover:border-blue-500/50 transition-all duration-300"
+                  className="relative bg-gradient-to-br from-[#181B29] to-[#0F1119] rounded-2xl shadow-2xl overflow-hidden border border-[#23263a] hover:border-yellow-500/50 transition-all duration-300"
                   whileHover={{
                     boxShadow: "0 20px 40px rgba(59, 130, 246, 0.1)",
                   }}
                 >
                   {/* Animated background gradient */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100"
+                    className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 via-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100"
                     transition={{ duration: 0.3 }}
                   />
                   
                   {/* Glow effect */}
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 blur-xl"
+                    className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 opacity-0 group-hover:opacity-100 blur-xl"
                     transition={{ duration: 0.5 }}
                   />
 
@@ -269,7 +269,7 @@ export default function Home() {
                       transition={{ type: "spring", stiffness: 300 }}
                     >
                       <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-lg opacity-0 group-hover:opacity-30"
+                        className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full blur-lg opacity-0 group-hover:opacity-30"
                         transition={{ duration: 0.3 }}
                       />
                       <img 
@@ -280,7 +280,7 @@ export default function Home() {
                     </motion.div>
                     
                     <motion.div 
-                      className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors"
+                      className="text-lg font-bold text-white mb-2 group-hover:text-yellow-300 transition-colors"
                       initial={false}
                     >
                       {category.name}
@@ -317,7 +317,7 @@ export default function Home() {
           className="relative"
         >
           <motion.div 
-            className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl blur-xl"
+            className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-3xl blur-xl"
             animate={{
               scale: [1, 1.05, 1],
               opacity: [0.5, 0.8, 0.5]
@@ -326,7 +326,7 @@ export default function Home() {
           />
           <div className="relative bg-gradient-to-br from-[#181B29]/80 to-[#0F1119]/80 backdrop-blur-sm rounded-3xl p-8 border border-[#23263a] shadow-2xl">
             <motion.h3 
-              className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+              className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -413,13 +413,13 @@ export default function Home() {
           className="relative"
         >
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-3xl blur-xl"
+            className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-yellow-500/5 rounded-3xl blur-xl"
             animate={{ rotate: [0, 1, -1, 0] }}
             transition={{ duration: 6, repeat: Infinity }}
           />
           <div className="relative bg-gradient-to-br from-[#181B29]/90 to-[#0F1119]/90 backdrop-blur-sm rounded-3xl p-8 border border-[#23263a] shadow-2xl">
             <motion.h3 
-              className="text-3xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent"
+              className="text-3xl font-bold mb-6 bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.02 }}
             >
               Payment Methods & Terms
@@ -430,7 +430,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <h4 className="text-xl font-semibold mb-4 text-blue-400">Accepted Payment Methods</h4>
+                <h4 className="text-xl font-semibold mb-4 text-yellow-400">Accepted Payment Methods</h4>
                 <div className="space-y-3 text-gray-300">
                   {['PayPal', 'Credit/Debit Cards', 'Apple Pay & Google Pay', 'Cryptocurrency (via Tebex)'].map((method, index) => (
                     <motion.p
@@ -497,18 +497,18 @@ export default function Home() {
           className="relative"
         >
           <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-3xl blur-xl"
+            className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-yellow-500/10 rounded-3xl blur-xl"
             animate={{
               background: [
-                'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%)',
-                'radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                'radial-gradient(circle, rgba(245, 158, 11, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%)',
+                'radial-gradient(circle, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%)',
               ]
             }}
             transition={{ duration: 4, repeat: Infinity }}
           />
           <div className="relative bg-gradient-to-br from-[#181B29]/90 to-[#0F1119]/90 backdrop-blur-sm rounded-3xl p-8 border border-[#23263a] shadow-2xl">
             <motion.h3 
-              className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"
+              className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-amber-400 to-yellow-400 bg-clip-text text-transparent"
               whileHover={{ scale: 1.02 }}
             >
               Contact & Support
@@ -519,7 +519,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <h4 className="text-xl font-semibold mb-4 text-blue-400">Get Help</h4>
+                <h4 className="text-xl font-semibold mb-4 text-yellow-400">Get Help</h4>
                 <div className="space-y-4 text-gray-300">
                   <p>Need assistance with your purchase or have questions about our server? We're here to help!</p>
                   <div className="space-y-3">

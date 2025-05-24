@@ -76,8 +76,8 @@ export default function Navbar() {
                   rel={item.external ? 'noopener noreferrer' : undefined}
                   className={`px-4 py-2 rounded-xl font-semibold transition-all duration-200 text-sm flex items-center gap-1
                     ${pathname === item.href
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md'
-                      : 'text-gray-200 hover:text-white hover:bg-white/10'}
+                      ? 'bg-gradient-to-r from-yellow-600 to-amber-600 text-white shadow-md'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-700'}
                   `}
                 >
                   {item.name}
@@ -91,11 +91,11 @@ export default function Navbar() {
               <div className="flex items-center gap-2 ml-2">
                 <button
                   onClick={() => setShowCartDrawer(true)}
-                  className="relative p-2 text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                  className="relative p-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-lg transition-colors"
                 >
                   <ShoppingCartIcon className="w-6 h-6" />
                   {basketItemCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                    <span className="absolute -top-1 -right-1 bg-yellow-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
                       {basketItemCount}
                     </span>
                   )}
@@ -121,7 +121,7 @@ export default function Navbar() {
                 ) : (
                   <button
                     onClick={() => setShowLoginModal(true)}
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg font-semibold transition-colors"
                   >
                     <UserIcon className="w-4 h-4" />
                     Login
@@ -134,11 +134,11 @@ export default function Navbar() {
             <div className="md:hidden flex items-center gap-2">
               <button
                 onClick={() => setShowCartDrawer(true)}
-                className="relative p-2 text-gray-200 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                className="relative p-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-lg transition-colors"
               >
                 <ShoppingCartIcon className="w-6 h-6" />
                 {basketItemCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+                  <span className="absolute -top-1 -right-1 bg-yellow-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
                     {basketItemCount}
                   </span>
                 )}
@@ -146,7 +146,7 @@ export default function Navbar() {
 
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="inline-flex items-center justify-center p-2 rounded-lg text-gray-200 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="inline-flex items-center justify-center p-2 rounded-lg text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500"
               >
                 <span className="sr-only">Open main menu</span>
                 {!isMobileMenuOpen ? (
@@ -178,8 +178,8 @@ export default function Navbar() {
                     rel={item.external ? 'noopener noreferrer' : undefined}
                     className={`px-4 py-2 rounded-xl font-semibold transition-all duration-200 text-base flex items-center gap-1
                       ${pathname === item.href
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md'
-                        : 'text-gray-200 hover:text-white hover:bg-white/10'}
+                        ? 'bg-gradient-to-r from-yellow-600 to-amber-600 text-white shadow-md'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-700'}
                     `}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -207,7 +207,7 @@ export default function Navbar() {
                           logout();
                           setIsMobileMenuOpen(false);
                         }}
-                        className="w-full text-left px-4 py-2 text-gray-200 hover:text-white hover:bg-white/10 rounded-xl transition-colors"
+                        className="w-full text-left px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-xl transition-colors"
                       >
                         Logout
                       </button>
@@ -218,7 +218,7 @@ export default function Navbar() {
                         setShowLoginModal(true);
                         setIsMobileMenuOpen(false);
                       }}
-                      className="w-full flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-colors"
+                      className="w-full flex items-center gap-2 px-4 py-2 bg-yellow-600 hover:bg-yellow-700 text-white rounded-xl font-semibold transition-colors"
                     >
                       <UserIcon className="w-4 h-4" />
                       Login

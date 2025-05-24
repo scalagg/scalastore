@@ -95,7 +95,7 @@ export default function CompletedPage() {
           className="space-y-4"
         >
           <div className="bg-[#181B29] border border-[#23263a] rounded-xl p-6">
-            <h3 className="text-lg font-semibold mb-2 text-blue-400">What's Next?</h3>
+            <h3 className="text-lg font-semibold mb-2 text-yellow-400">What's Next?</h3>
             <ul className="text-sm text-gray-300 space-y-1 text-left">
               <li>• Join our server to enjoy your new items</li>
               <li>• If you're online, please relog to receive items</li>
@@ -106,7 +106,7 @@ export default function CompletedPage() {
           <div className="flex gap-4">
             <Link
               href="/store"
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
+              className="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors"
             >
               Continue Shopping
             </Link>

@@ -116,7 +116,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         />
                         <div className="flex-1">
                           <h3 className="text-white font-semibold mb-1">{item.name}</h3>
-                          <p className="text-blue-400 font-bold">${item.in_basket.price.toFixed(2)}</p>
+                          <p className="text-yellow-400 font-bold">${item.in_basket.price.toFixed(2)}</p>
                           
                           <div className="flex items-center justify-between mt-3">
                             <div className="flex items-center gap-2">
@@ -160,7 +160,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
               <div className="p-6 border-t border-[#23263a] bg-[#0f1017]">
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-lg font-semibold text-white">Total:</span>
-                  <span className="text-2xl font-bold text-blue-400">${subtotal.toFixed(2)}</span>
+                  <span className="text-2xl font-bold text-yellow-400">${subtotal.toFixed(2)}</span>
                 </div>
                 
                 <button
@@ -170,7 +170,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                     }
                   }}
                   disabled={!basket?.data?.links?.checkout}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-yellow-600 hover:bg-yellow-700 disabled:bg-yellow-800 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Proceed to Checkout
                 </button>

@@ -73,7 +73,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
             >
                 {/* Animated glow effect */}
                 <motion.div
-                    className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-3xl blur opacity-0 group-hover:opacity-30"
+                    className="absolute -inset-0.5 bg-gradient-to-r from-yellow-500 via-amber-500 to-orange-500 rounded-3xl blur opacity-0 group-hover:opacity-30"
                     animate={{
                         rotate: isHovered ? 360 : 0,
                     }}
@@ -86,7 +86,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
                         {floatingParticles.map((particle) => (
                             <motion.div
                                 key={particle.id}
-                                className="absolute w-1 h-1 bg-blue-400 rounded-full"
+                                className="absolute w-1 h-1 bg-yellow-400 rounded-full"
                                 initial={{
                                     x: '50%',
                                     y: '50%',
@@ -110,13 +110,13 @@ export default function PackageCard({ rank }: PackageCardProps) {
                 )}
 
                 <motion.div
-                    className="relative bg-gradient-to-br from-[#181B29] via-[#1E2139] to-[#0F1119] rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-[#23263a] group-hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
+                    className="relative bg-gradient-to-br from-[#181B29] via-[#1E2139] to-[#0F1119] rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-[#23263a] group-hover:border-yellow-500/50 transition-all duration-300 cursor-pointer"
                     onClick={() => setOpen(true)}
                     whileTap={{ scale: 0.98 }}
                 >
                     {/* Animated background gradient */}
                     <motion.div
-                        className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100"
+                        className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 via-amber-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100"
                         transition={{ duration: 0.5 }}
                     />
 
@@ -184,7 +184,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
                     <div className="relative flex-1 flex flex-col justify-between p-6">
                         <div>
                             <motion.h3 
-                                className="text-lg font-bold mb-2 text-white group-hover:text-blue-300 transition-colors"
+                                className="text-lg font-bold mb-2 text-white group-hover:text-yellow-300 transition-colors"
                                 whileHover={{ scale: 1.02 }}
                             >
                                 {rank.name}
@@ -213,7 +213,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
                                     </>
                                 ) : (
                                     <motion.span 
-                                        className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
+                                        className="text-xl font-bold bg-gradient-to-r from-yellow-400 to-amber-400 bg-clip-text text-transparent"
                                         animate={{
                                             backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
                                         }}
@@ -233,7 +233,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
                                         packageId={rank.id}
                                         packageName={rank.name}
                                         onLoginRequired={handleLoginRequired}
-                                        className="px-5 py-2 text-sm bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-blue-500/25"
+                                        className="px-5 py-2 text-sm bg-gradient-to-r from-yellow-600 to-amber-600 hover:from-yellow-700 hover:to-amber-700 shadow-lg hover:shadow-yellow-500/25"
                                     />
                                 </motion.div>
                             </div>
@@ -262,7 +262,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
                         >
                             {/* Modal glow effect */}
                             <motion.div
-                                className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-xl"
+                                className="absolute -inset-4 bg-gradient-to-r from-yellow-500/20 via-amber-500/20 to-orange-500/20 rounded-3xl blur-xl"
                                 animate={{
                                     scale: [1, 1.05, 1],
                                     opacity: [0.3, 0.6, 0.3]
@@ -292,7 +292,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
                                         whileHover={{ scale: 1.1, rotate: 5 }}
                                     >
                                         <motion.div
-                                            className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-lg opacity-50"
+                                            className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl blur-lg opacity-50"
                                             animate={{
                                                 scale: [1, 1.2, 1],
                                                 opacity: [0.3, 0.6, 0.3]
@@ -307,7 +307,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
                                     </motion.div>
                                     
                                     <motion.h2 
-                                        className="text-3xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+                                        className="text-3xl font-bold mb-3 bg-gradient-to-r from-yellow-400 to-amber-400 bg-clip-text text-transparent"
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: 0.3 }}
@@ -364,7 +364,7 @@ export default function PackageCard({ rank }: PackageCardProps) {
                                         packageId={rank.id}
                                         packageName={rank.name}
                                         onLoginRequired={handleLoginRequired}
-                                        className="text-lg bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 shadow-2xl hover:shadow-blue-500/25"
+                                        className="text-lg bg-gradient-to-r from-yellow-600 via-amber-600 to-orange-600 hover:from-yellow-700 hover:via-amber-700 hover:to-orange-700 shadow-2xl hover:shadow-yellow-500/25"
                                     />
                                 </motion.div>
                             </div>

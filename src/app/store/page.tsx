@@ -91,7 +91,7 @@ export default function Store() {
           <h2 className="text-2xl font-bold text-red-500 mb-4">{error}</h2>
           <button
             onClick={() => window.location.reload()}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition-colors"
+            className="px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded transition-colors"
           >
             Try Again
           </button>
@@ -109,7 +109,7 @@ export default function Store() {
             <select
               value={selectedCategory || ''}
               onChange={(e) => setSelectedCategory(e.target.value || null)}
-              className="bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
             >
               <option value="">All Categories</option>
               {categories.map((category) => (
@@ -122,7 +122,7 @@ export default function Store() {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-              className="bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"
             >
               <option value="price-asc">Price: Low to High</option>
               <option value="price-desc">Price: High to Low</option>
@@ -135,7 +135,7 @@ export default function Store() {
             placeholder="Search packages..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-64"
+            className="bg-gray-800 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 w-full md:w-64"
           />
         </div>
 
@@ -188,7 +188,7 @@ export default function Store() {
                   </div>
                   <button
                     onClick={() => handleAddToCart(pkg.id)}
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded transition-colors"
+                    className="px-4 py-2 bg-yellow-600 hover:bg-yellow-700 rounded transition-colors"
                   >
                     Add to Cart
                   </button>

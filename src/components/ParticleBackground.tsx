@@ -43,7 +43,7 @@ export default function ParticleBackground() {
     // Initialize particles
     const initParticles = () => {
       const particles: Particle[] = [];
-      const colors = ['#3B82F6', '#8B5CF6', '#06B6D4', '#10B981', '#F59E0B'];
+      const colors = ['#F59E0B', '#FBBF24', '#F97316', '#EAB308', '#D97706'];
       
       for (let i = 0; i < 50; i++) {
         particles.push({
@@ -95,7 +95,7 @@ export default function ParticleBackground() {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.1 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `rgba(245, 158, 11, ${0.1 * (1 - distance / 150)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -184,7 +184,7 @@ export function FloatingShapes() {
             ease: "easeInOut",
           }}
         >
-          <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg transform rotate-45" />
+          <div className="w-full h-full bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg transform rotate-45" />
         </motion.div>
       ))}
     </div>

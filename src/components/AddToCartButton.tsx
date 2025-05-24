@@ -56,11 +56,12 @@ export default function AddToCartButton({
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       className={`
-        w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed 
-        text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200
+        ${className || 'px-6 py-3 text-base'} 
+        w-full bg-yellow-600 hover:bg-yellow-700 disabled:bg-yellow-800 disabled:cursor-not-allowed
+        text-white font-semibold rounded-lg transition-all duration-200 
         flex items-center justify-center gap-2
+        ${loading ? 'opacity-50' : ''}
         ${success ? 'bg-green-600 hover:bg-green-600' : ''}
-        ${className}
       `}
     >
       <ShoppingCartIcon className="w-5 h-5" />

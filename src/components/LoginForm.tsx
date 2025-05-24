@@ -100,7 +100,7 @@ export default function LoginForm({ onLogin, onClose }: LoginFormProps) {
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-4 py-3 bg-[#23263a] border border-[#3a3f5c] rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-gray-800 text-white rounded-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
             placeholder="Enter your username"
             required
             autoComplete="off"
@@ -117,7 +117,7 @@ export default function LoginForm({ onLogin, onClose }: LoginFormProps) {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+          className="w-full bg-yellow-600 hover:bg-yellow-700 disabled:bg-yellow-800 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors"
           style={{ pointerEvents: 'auto' }}
         >
           {loading ? 'Logging in...' : 'Login'}

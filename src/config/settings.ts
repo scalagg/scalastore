@@ -19,6 +19,14 @@ export const settings = {
   currency_symbol: "$",
   home_category_widgets: [
     {
+        key: "upgrades",
+        name: "Upgrades",
+        url: "/store/ranks-upgrades",
+        image: "/chest.png",
+        description: "Upgrade your rank",
+        tebex_category_id: "2732338"
+    },
+    {
         key: "ranks",
         name: "Ranks",
         url: "/store/ranks",
@@ -27,30 +35,14 @@ export const settings = {
         tebex_category_id: "1916403"
     },
     {
-      key: "keys",
-      name: "Keys",
-      url: "/store/keys",
-      image: "/key.png",
-      description: "Explore our keys",
-      tebex_category_id: "2847263"
-    },
-    {
-      key: "tags",
-      name: "Tags",
-      url: "/store/tags",
-      image: "/tag.png",
-      description: "Explore our tags",
-      tebex_category_id: "2847263"
-    },
-    {
-      key: "misc",
-      name: "Misc",
-      url: "/store/misc",
-      image: "/chest.png",
-      description: "Explore misc",
-      tebex_category_id: "2847263"
-    },
-  ],
+        key: "tags",
+        name: "Tags",
+        url: "/store/tags",
+        image: "/tag.png",
+        description: "Explore our tags",
+        tebex_category_id: "1922830"
+    }
+],
   home_subcategories: [
     {
       key: "coins",
